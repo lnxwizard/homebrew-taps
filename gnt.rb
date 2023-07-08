@@ -5,21 +5,21 @@
 class Gnt < Formula
   desc "Easily create your Go projects in the terminal."
   homepage "https://github.com/lnxwizard/gnt"
-  version "0.8.0-beta"
+  version "0.9.0-beta"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/lnxwizard/gnt/releases/download/0.8.0-beta/gnt_0.8.0-beta_darwin_amd64.zip"
-      sha256 "f28af3888b60bfc38d5021673de49e730d5115a0a2f18670387c1a39fae2a2a2"
+    if Hardware::CPU.arm?
+      url "https://github.com/lnxwizard/gnt/releases/download/0.9.0-beta/gnt_0.9.0-beta_darwin_arm64.zip"
+      sha256 "cfa851c1827e0a68b0fcd6babe2135bd779938919bf566fd9e00f155cffcb37f"
 
       def install
         bin.install "bin/gnt"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/lnxwizard/gnt/releases/download/0.8.0-beta/gnt_0.8.0-beta_darwin_arm64.zip"
-      sha256 "873c6bf1aedf44a254e818522313405f23af9350db8a92f48216312bb8039c9c"
+    if Hardware::CPU.intel?
+      url "https://github.com/lnxwizard/gnt/releases/download/0.9.0-beta/gnt_0.9.0-beta_darwin_amd64.zip"
+      sha256 "ce6d022a6e727388b36cb8f706dc6b1b6ed4ef47ae8ac3b5907e7079f709efa1"
 
       def install
         bin.install "bin/gnt"
@@ -29,24 +29,24 @@ class Gnt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/lnxwizard/gnt/releases/download/0.8.0-beta/gnt_0.8.0-beta_linux_amd64.tar.gz"
-      sha256 "dee49185ceb327eae97b25dc9c63983b60f827ae5d10f0b10c97d1d1f2ad3a36"
+      url "https://github.com/lnxwizard/gnt/releases/download/0.9.0-beta/gnt_0.9.0-beta_linux_amd64.tar.gz"
+      sha256 "bd48aad52a91d7d46cc5c3b55bedb2035b02fa61ced640590e9e91df0b89df77"
 
       def install
         bin.install "bin/gnt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lnxwizard/gnt/releases/download/0.8.0-beta/gnt_0.8.0-beta_linux_armv6.tar.gz"
-      sha256 "31f8a69f9a7f30dc28bbb5be742fe46a941fb27be9e316fbd610a601a44ce542"
+      url "https://github.com/lnxwizard/gnt/releases/download/0.9.0-beta/gnt_0.9.0-beta_linux_armv6.tar.gz"
+      sha256 "b95720a0ef0ebe1ab9cd41f2e3327fb6685954a56c0573a5c043d07c8376238e"
 
       def install
         bin.install "bin/gnt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lnxwizard/gnt/releases/download/0.8.0-beta/gnt_0.8.0-beta_linux_arm64.tar.gz"
-      sha256 "7772f704d5ed46b6214aeac73cb3c5ffdd9195aba73ce62a94297c957253b6ec"
+      url "https://github.com/lnxwizard/gnt/releases/download/0.9.0-beta/gnt_0.9.0-beta_linux_arm64.tar.gz"
+      sha256 "5e14b654bf04dc7cb45e70011c0b4ea1c381eeafd6cf4ae6575fdacc8874e4c6"
 
       def install
         bin.install "bin/gnt"
